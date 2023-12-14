@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+div {
+    height: 300px;
+    width: 300px;
+    background: blue;
+}
+
+/*Umas das ferramentas do CSS para deixar o site responsivo, e a uma das mais fortes é o uso da @mediacare - que é falar pro seu css qual estilo aplicar de acordo com a tela do dispositivo
+
+Mudanças de estilos segundo telas
+*/
+
+@media (max-width: 280px)/*Condição/ min*/{
+    div {
+        background: red;
+        height: 200px;
+        width: 200px;
+    }
+}

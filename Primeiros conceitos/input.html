@@ -1,0 +1,34 @@
+
+
+<input 
+    
+    autocomplete="street-address"
+    disabled
+    value="Alex"
+
+/>
+
+<!--Errado-->
+<p>Rua</p>
+<input 
+    type="text"
+    autocomplete="street-address"
+    placeholder="Digite sua rua"
+    
+/>
+
+<!--Rótulo=label to rotulando meu input-->
+<label>
+    Nome:
+    <input 
+        type="text"
+        autocomplete="name"
+        placeholder="Digite"
+        autofocus
+    
+    />
+</label>
+
+<!--Aqui a label fala que é para o item que tiver o ID com memso nome, sendo pertecente ao grupo, mesmo efeito da label anterior-->
+<label for="ruua">Rua2:</label>
+<input id="ruua">

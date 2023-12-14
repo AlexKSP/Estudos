@@ -1,0 +1,46 @@
+/* algumas configurações de telas para certas telas
+
+    All: Para todfos os dispositivos
+    Braille: para dispositivos táteis
+    EMbossed: para dispositivos que imprimem em braile
+    handheld: para dispositivos portateis, geralmente com telas pequenas e banda limitada
+    Print: para impressão em papel
+    Projection: para apresentações como PPS.
+    Screen: para monitores ou dispositivos com telas coloridas e resolução adequada
+    Speech: Para sintetizadores de voz. As CSS 2 tem uma especificação com CSS chamada Aural, onde podemos formatar a voz dos sintetizadores.
+
+    Orientação
+    portrait -> altura maior que a largura
+    landscape -> largura maior que a altura
+
+    and usado nas @media, nada mais é que porta logica, ou seja podemos usar as demais, por mais que não é tão usado. Assim como os demais responsividades, normalmente só usa o screen, pois é o mais adaptavel a telas
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    width: 700px;
+    height: 700px;
+    background: blue;
+}
+
+@media (max-width: 600px) { /*Aqui determinamos a largura da tela e aplicamos uma condição, que quando a tela for 600px ou menor ela va aplicar o comando seguinte*/
+    div {
+        background: red;
+        height: 200px;
+        width: 200px;
+    }
+}
+/*operaedor logico, duas condições para acontecer algo*/
+@media screen and (max-width: 600px) and (orientation: landscape) { /*Aqui podemos ainda adicionar a orientação, determinando assim quando a tela tiver em X modo, aplicara um Y resultado*/
+    div {
+        background: red;
+        height: 200px;
+        width: 200px;
+    }
+}
+

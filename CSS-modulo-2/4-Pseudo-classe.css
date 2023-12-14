@@ -1,0 +1,101 @@
+/*  PSEUDO CLASSES
+
+:active = quando o elemento está ativo, ou seja, está sendo pressionado
+:visited = seleciona o link que foi visitado
+:hover = quando o mouse passe em cima do elemento (um dos mais utilizados)
+:checked = usado em radio / checkbox / select
+:disabled = elemento desabilitado / button / input
+:enable = elemento está habilitado
+:focus = é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento
+:read-only = seleciona o uinput ou textarea que são apenas leitura
+:empty = elemento que não tem filho
+
+:first-child = primeiro filho / ex: primeira li de uma ul / primeiro span de uma div
+:first-of-type = primeiro elemento de seu tipo entre os filhos de seu elemento pai
+:last-child = último filho
+:last-of-type = último elemento de seu tipo entre os filhos de seu elemento pai
+:not() = estiliza os elementos, exceto o que está dentro do ()
+:nth-child() = seleciona o elemento baseado na sua posição. Ex:  :nth-child(3)
+:nth-last-child() = seleciona o elemento baseado na sua posição, contando de trás para frente.
+
+Pseudo classe se declara com apenas um " : " já elemento são dois
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+}
+
+button:active {
+    background-color: red;
+}
+
+a:visited {
+    color: red;
+}
+
+/*p:hover {
+    color: blue;
+}*/
+
+input:checked {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.text:focus {
+    border: 4px solid red;
+    outline: none; /*Sem isso não verei a borda*/
+}
+
+.leia:read-only {
+    border: 1px solid green;
+    outline: none;
+}
+
+.container {
+    height: 50px;
+    width: 50px;
+    background: blue;
+}
+
+.container:empty {
+    background: red;
+}
+
+li:first-child { /*Só vale quando os elementos estão dentro de um local*/
+    color: red;
+}
+
+li:last-child {
+    color: green;
+}
+
+.conteudo :not(.excluido) { /*ex:pode ser (p) - Vai estilizar tudo menos o que estiver dentro dos parametros*/
+    color: red;    
+}
+
+li:nth-child(3) {
+    color: green;
+}
+
+li:nth-last-child(2) {
+    color: yellow;
+}
+
+/*span:first-of-type {
+    color: purple;
+}
+
+p:first-of-type {
+    color: purple;
+}*/
+

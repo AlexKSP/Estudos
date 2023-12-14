@@ -1,0 +1,22 @@
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: #4682B4;
+    /*padding: 50px;*/
+    margin-top: 20px;
+    margin-left: 21px;
+    margin-right: 22px;
+    margin-bottom: 25px;/* margim redirecionada funciona para padding tambem*/
+    /* margin: 10px 10px 20px 20px; tambem é posive fazer assim, aplicando nas 4 direções*/
+    /*       12h..cima 15h..direita 18h..baixo 21h..equerda   */
+    /*Usando 3, 10px 10px 20px é igual a cima, laterais, baixo*/
+    /*usando doi valore, 10px 20px é cima-baxio e lateria*/
+}
+
+.box-2 {
+    width: 50px;
+    height: 50px;
+    background-color: #708090;
+    margin: 30px; /* margin externo*/
+    padding: 30px /*padding interno*/;
+}

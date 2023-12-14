@@ -1,0 +1,65 @@
+/*
+    position: static (padrão) - Não acotas valores de top, bottom, right e left
+    position: fixed - fica o elmnto na tela aonde vc posicionar
+    position: sticky - age como um adesivo, fixa o elemento só onde eu determinar
+    position: relative - posição relativa a posição inicial dele
+    position: absolute - posição absoluta(fixa) a algum lmento ou a pagina
+        - SE não tiver pai / pai for static -> Posiciona referente a pagina
+        - Se o pai NÂO for static -> Posiciona referente ao pai
+
+    propriedades: 
+        -top
+        -bottom
+        -left
+        -right
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 200vh;
+    width: 200vw;
+}
+
+.dad {
+    background-color: blueviolet;
+    height: 350px;
+    width: 350px;
+    
+    /*position: fixed; /*deixando com fixed, ele fica fixo, como se estivesse uma camada acima e demais itens podem ser escondidos atras dele*/
+    /*top: 50px;
+    /*left: 50px;
+    /*opacity: 40%;*/
+    
+    /*position: sticky; /* Precisa adiconar valor de top, bottom, left e right, pois ele é um adesivo e tem de definir onde "colar", é uma mistura de static com fixed*/
+    /*top: 20px; /*neste caso quando ele chegar a 20px do top ele vai parar e ficar fixo*/
+    
+    /*position: relative;
+    top: 20px;
+    left: 20px;*/
+
+    position: absolute;/* MESMO ESQUEMA, Como se subisse uma camada*/
+    top: 60px; /* como ele não tem pai, ele se baseia no body ou quem estiver acima*/
+
+}
+
+.son {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    
+    /*position: relative;
+    top: 20px;
+    left: 20px;*/
+}
+
+.secundario {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    /*position: relative; /* precisa adicionar os valores das direções, e ele será relativo a sua posição inicial*/
+    /*top: 20px;*/
+
+}
+

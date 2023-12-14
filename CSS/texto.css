@@ -1,0 +1,22 @@
+h1 {
+   color: red;
+   font-size: 64px;
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Roboto', sans-serif;
+   font-style: italic;
+   text-shadow: 10px 10px 10px black; /*4 parametros, sendo o primeiro o horizontal, segundo vertical, terçeiro quão esfumaçada será a sombra e quarta a cor da sombra*/
+}
+
+p{
+   color: blue;
+   font-size: 30px;
+   font-weight: 900; /*Espressura*/
+   font-family: 'Roboto', sans-serif;
+   line-height: 50px; /*Espsamento da linha*/
+   letter-spacing: 10px; /*Aumenta o epaçamento entre um letra em outra*/
+   word-spacing: 40px; /*espaçamenbto entre a palavra*/
+   text-align: center; /*alinhamento do texto, jutify jutifica a linha*/
+   text-transform: uppercase; /*deixa tudo maiculo, ou minusculo, captalize somente a primeira maicula*/
+   text-decoration: overline;/*underline linha em baixo, ou linha em cima.*/
+
+}

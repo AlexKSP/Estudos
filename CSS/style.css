@@ -1,0 +1,134 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+#titulo {
+    color: aqua;
+    background: gray;
+    font-weight: bold; /*Negrito*/
+
+}
+
+.paragrafo {
+    color: grey;
+    font-size: 14px;
+}
+
+#login {
+    font-weight: bold;
+}
+
+.entradanome, .entradasenha/*, p, #login */ {
+    background-color: rgb(197, 197, 197);
+}
+
+button {
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+}
+
+/* ABSOLUTAS
+    PX = (PIXEL)
+    IN = (INCHES/POLEGADAS)
+    CM/MM = (CENTÍMETRO/MILEMETRO)
+
+    RELATIVAS
+
+    %  = CALCULA O TAMANHO RELATIVO AO ELEMENTO PAI
+    VW = (VIEW- WIDTH) 1VW É 1% DA LARGURA DA JANLA DO NAVEGADOR
+    VH = (VIEW- HEIGHT) 1VH É 1% DA ALTURA DA JANELA DO NAVEGADOR
+    EM (emphemeral unit - unidade transitoria) = É UM UNIDADE RELATIVA AO ELEMENTO PAI
+    REM (root emphemeral unit - unidade transitoria) = É UMA UINIDADE RELATIVA AO ELEMENTO RAIZ
+*/
+
+.vo {
+    
+}
+
+.pai {
+    font-size: 16px;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+}
+
+/*fonte size 100% é relativo ao pai que é 16px, sendo assim o filho é igual ao pai nesta condição*/
+.filho {
+    font-size: 100%;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+/*quando quero que algo se adapt a outro item*/
+/*VW e VH*/
+.pai1 {
+    font-size: 16px;
+    width: 50vw;
+    height: 50vh;
+    background-color: blue;
+}
+
+.filho1 {
+    font-size: 100%;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+
+/*EM*/
+
+.vo2 {
+    font-size: 16px;
+}
+
+.pai2 {
+    font-size: 2em;
+    color: white;
+    width: 50vw;
+    height: 50vh;
+    background-color: blue;
+}
+/*em =  sempre relattivo ao PAI*/
+.filho2 {
+    font-size: 2em;
+    color: white;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+
+/*rem = o elemento rem sempre vai buscar no elemento root, sempre vai buscar o item mais acima da arvoré. No caso pode ser no body ou a cunfiguração mais acima se crio algo a respeito de tamanho. NO head ou html colocar um tamanho, ele vai puxar nele*/
+.vo3 {
+    font-size: 16px;
+}
+
+.pai3 {
+    font-size: 2rem;
+    color: white;
+    width: 50vw;
+    height: 50vh;
+    background-color: blue;
+}
+/*em =  sempre relattivo ao PAI*/
+.filho3 {
+    font-size: 2rem;
+    color: white;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+
+    /*  Questão, qual e quando usar?
+    
+    ABSOLUTAS somente pixel
+    PX = (PIXEL)
+
+    RELATIVAS, quando você quer que as coisas se adaptem mais, isso vai de tamnhos de telas
+
+    %  = CALCULA O TAMANHO RELATIVO AO ELEMENTO PAI
+    VW = (VIEW- WIDTH) 1VW É 1% DA LARGURA DA JANLA DO NAVEGADOR
+    VH = (VIEW- HEIGHT) 1VH É 1% DA ALTURA DA JANELA DO NAVEGADOR
+    EM (emphemeral unit - unidade transitoria) = É UM UNIDADE RELATIVA AO ELEMENTO PAI
+    REM (root emphemeral unit - unidade transitoria) = É UMA UINIDADE RELATIVA AO ELEMENTO RAIZ
+*/

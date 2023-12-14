@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box; 
+    /*boarder-box, se eu falo que minha caixa vai ser sempre 100 por 100, ela sempre será. Se coloco uma borda, em vez dele ircrescendo pra fora, ela vai crescendo pra dentro*/
+    
+    /*content-box; - padrão, ele sempre soma os valores, se coloco 50 width e heigth como 50, se  coloco 50 mais a obarda ele soma, se coloca padding, é 50 mais a boarda mais o padding*/
+
+}
+/*Box sizing vai servir para quando você quer uma caixa que seja, tenha um tamanho X e esse tamanho não ultrapasse os limites, pois ao colocar padding e margin os valores de width e height aumentam consequentemente passando dos limites que você quer.*/
+.box {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    background-color: blue;
+    border: 10px solid/*dashed*/ #00ff02;/*tamanho da boarda, tipo da boarda, cor da boarda*/
+}

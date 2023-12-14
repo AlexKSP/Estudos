@@ -1,0 +1,49 @@
+.box {
+    background: #FFD700;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.box-2 {
+    background: #C71585;
+}
+
+.box-3 {
+    background: #00FF00;
+}
+/*
+
+DISPLAY
+
+- BLOCK
+- INLINE
+- INLINE-BLOCK
+
+- GRID
+- FLEX
+
+- BLOCK
+    Vem como pradrão: div, section, p, h1, h2, ul, article...
+
+    Ocupa 100% da largura do elemento pai
+    Sempre ocupa toda a sua linha
+    Altura definida de acordo com o conteúdo
+    Podemos definir height e width
+    Podemos definir valores de margin
+
+- INLINE "todos na mesma linha"
+    Vem como pradrão a, span, b, i....
+
+    Elementos em linha
+    Não permite alterar height e width
+    Não podemos definir valores de margin top e bottom
+    Ganha comportamento de uma palavra
+
+-INLINE-BLOCK 'mistura'
+
+    Elementos em linha, porém com característica do display block
+    altura e largura podem ser alteradas
+
+    
+*/

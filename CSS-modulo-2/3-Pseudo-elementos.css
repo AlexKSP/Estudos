@@ -1,0 +1,42 @@
+/*Pseudo elementos, são formas de trocar algumas configurações de alguns elementos.*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 50px;
+}
+
+input {
+    border: 1px solid red;
+    color: blue;
+}
+
+input::placeholder {
+    color: pink;
+}
+
+p {
+    color: blue;
+}
+
+/*line a primeira linha e latter a primeira letra*/
+p::first-line {
+    color: red;
+}
+
+/*before = antes - after = depois*/
+a {
+    color: blue;
+}
+
+a::before {
+    content: "Antes -> ";    
+}
+
+a::after {
+    content: " <-Depois";
+}
