@@ -42,7 +42,7 @@ const trade = document.querySelector("#main-input")
 /*trade.placeholder = "Trocado texto JS"
 console.log(trade.value) //pegar um valor dentro de algo*/
 
-trade.value = 2000 //pegar valor
+//trade.value = 2000 //pegar valor
 console.log(trade.value) 
 
 const image = document.querySelector("img")
@@ -65,3 +65,31 @@ texto.innerHTML = "O novo <b>texto</b>" //adicionnar HTML
 console.log(texto.textContent) // só HTML desconsiderando o css 
 console.log(texto.innerText) // leva em conta o CSS //Mude a variavel 'texto' para "paragraph" pois o segundo paragrafo está escondido com style no HTML
 console.log(texto.innerHTML) // trás tudo e permite adicioanr HTML
+
+
+const botao = document.querySelector("button.abacate")
+
+//botao.style.color = "black"
+//botao.style.backgroundColor = "#984560" //Detalhe que vocÊ não pode deixar igual, pois o " - " aqui no JS é usado para separar e não funciona. Por isso é utilizado letras coladas separando por maisculas
+botao.style.fontSize = "10px"
+
+
+        /*Eventos*/
+//evento são como hover ou active de passar o mouse por cima ou clicar. Todos eventos começa com on
+
+const mostrandoInput = document.querySelector("#main-input")
+const paragrafoTrocado = document.querySelector(".paragraph")
+
+function clickNoBotao(){
+    
+    const textoDoInput = document.querySelector("#main-input").value
+    console.log(textoDoInput)
+    paragrafoTrocado.innerText = ` aqui:${textoDoInput}`
+    paragrafoTrocado.style.visibility = "visible"
+     
+}
+/*
+function digiteiNoInput(){
+    console.log(mostrandoInput.value)
+}*/
+

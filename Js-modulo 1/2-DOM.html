@@ -10,17 +10,18 @@
     <main>
         <section class="main-box">
             <div>
+                <!--Todos eventos começa com on - ONclick - ONchanger-->
                 <h1>Titulo</h1>
                 <img class="abacate" src="./laptop-icon.svg"></img>
             </div>
             <p class="paragraph-js">Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Quaerat ea fugiat assumenda quibusdam.</p>
             <!--Paragrafo escondido-->
-            <p class="paragraph" style="visibility: hidden;">Segundo paragrafo</p>
+            <p class="paragraph" style="visibility:hidden;">Segundo paragrafo</p>
             
-            <!--Posso experimentar, copiar o class do paragrafo  e colocar em outros elementos, no JS vai aparecer como HTML collection-->
-            <input type="text" placeholder="Digite aqui" maxlength="20" id="main-input"
-            name="nome">
-            <button class="abacate">Clique aqui</button>
+            <!--Posso experimentar, copiar o class do paragrafo  e colocar em outros elementos, no JS vai aparecer como HTML collection - removido onkeypress="digiteiNoInput()"-->
+            <input  type="text" placeholder="Digite aqui" maxlength="20" id="main-input" name="nome">
+            
+            <button onclick="clickNoBotao()" class="abacate">Clique aqui</button>
         </section>
     </main>
 </body>
