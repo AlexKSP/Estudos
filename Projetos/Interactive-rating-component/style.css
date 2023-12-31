@@ -59,7 +59,7 @@ p {
     color: #959EAC;
 }
 
-ul {
+.box {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -67,7 +67,7 @@ ul {
     gap: 2rem;
 }
 
-li {
+.container {
     background-color: #3f444b;
     width: 3rem;
     height: 3rem;
@@ -80,8 +80,10 @@ li {
 
     font-weight: 600;
     color: #959EAC;
+}
 
-    
+span {
+    display: none;
 }
 
 .submit {
@@ -111,8 +113,8 @@ li {
     background-color: #fff;
     color: #FB7413;
 }
-
-.ratingValue {
+    /*Aqui era configuração para button que usaria, porém o certo é checkbox*/
+/* .ratingValue {
     border: none;
     width: 100%;
     height: 100%;
@@ -133,4 +135,4 @@ li {
 .ratingValue:active {
     color: #fff;
     background-color: #FB7413;
-}
+} */
