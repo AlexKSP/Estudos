@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Hanken Grotesk', sans-serif;
+            outline: none;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(49, 93, 187);
+        }
+
+        main {
+            width: 32.5rem;
+            height: 25rem;
+            padding: .625rem;
+            background-color: rgb(109, 119, 141);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .inputInfos {
+            
+        }
+
+        h1 {
+            text-transform: uppercase;
+            margin: 2rem;
+        }
+
+        .value, .signals, button {
+            border: none;
+            border-radius: 2rem;
+            padding: .3rem;
+        }
+
+        .signals {
+            appearance: none;
+            width: 2rem;
+            text-align: center;
+        }
+
+        button {
+            text-transform: uppercase;
+            background-color: orange;
+            color: white;
+            position: relative;
+            top: 3.125rem;
+            left: 12.5rem;
+
+        }
+
+        button:hover {
+            background-color: rgb(194, 126, 0);
+            color: white;
+        }
+
+        button:active{
+            background-color: white;
+            color: orange;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Calculadora Simples</h1>
+    
+        <section class="inputInfos">
+
+            <label> Valor 1
+                <input type="number" class="value" id="value-1" placeholder="Digite o primeiro valor">
+            </label>
+
+            <select name="signals" class="signals">
+                <option value="sum">+</option>
+                <option value="subtraction">-</option>
+                <option value="multiplication">*</option>
+                <option value="division">/</option>
+            </select>
+
+            <label>Valor 2
+                <input type="number" class="value" id="value-2" placeholder="Digite o segundo valor">
+            </label>
+            
+            <button>Calcular</button>
+
+        </section>
+
+        <p class="resultCalc"></p>
+
+    </main>
+    
+</body>
+<script>
+
+    const button = document.querySelector('button')
+    const resultCalc = document.querySelector('.resultCalc')
+
+    function sumFunction(value1 = 0, value2 = 0) {
+        let result = value1 + value2
+        resultCalc.innerHTML = `A soma de é igual: ${result}`
+    }
+
+    function subFunction(value1 = 0, value2 = 0) {
+        let result = value1 - value2
+        resultCalc.innerHTML = `A subitração de é igual: ${result}`
+    }
+
+    function multFunction(value1 = 0, value2 = 0) {
+        let result = value1 * value2
+        resultCalc.innerHTML = `A multiplicação de é igual: ${result}`
+    }
+
+    function divFunction(value1 = 0, value2 = 0) {
+        let result = value1 / value2
+        resultCalc.innerHTML = `A divisão de é igual: ${result}`
+    }
+
+    function calc() {
+        const signals = document.querySelector('.signals').value
+        const value1 = document.querySelector('#value-1').value
+        const value2 = document.querySelector('#value-2').value
+
+        switch (signals) {
+            case 'sum':
+                console.log('sum')
+                sumFunction(parseFloat(value1) , parseFloat(value2))
+                break;
+
+            case 'subtraction':
+                console.log('subtraction')
+                subFunction(value1, value2)
+                break;
+
+            case 'multiplication':
+                console.log('multiplication')
+                multFunction(value1, value2)
+                break;
+
+            case 'division':
+                console.log('division')
+                divFunction(value1, value2)
+                break;
+
+            default:
+                console.log('ERRO')
+                break;
+        }
+        //console.log(value1)
+    }
+
+    button.addEventListener('click', calc)
+
+</script>
+</html>
