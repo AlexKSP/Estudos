@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do while</title>
+</head>
+
+<body>
+
+    <main>
+
+        <input type="text" class="inputName">
+        <button class="buttonSearch">buscar</button>
+        <p class="resultPhone"></p>
+
+    </main>
+
+</body>
+<script>
+
+    const buttonSearch = document.querySelector('.buttonSearch')
+    const resultPhone = document.querySelector('.resultPhone')
+
+    const users = [
+        {
+            name: 'Alex',
+            phone: '(11) 94245-1596'
+        },
+        {
+            name: 'José',
+            phone: '(11) 94515-4698'
+        },
+        {
+            name: 'Thiago',
+            phone: '(21) 98561-1234'
+        }
+    ]
+
+    function search() {
+
+        const inputName = document.querySelector('.inputName').value
+        let i = 0
+
+        // while (inputName !== users[i].name) { //Está correto!
+
+        //     if (users[i].name.toLowerCase() == inputName.toLowerCase()) {
+        //         resultPhone.innerHTML = `Telefone: ${users[i].phone}`
+        //         break
+        //     } else {
+        //         resultPhone.innerHTML = 'Usuário não cadastrado!'
+        //         console.log(users[i])
+        //     }
+
+        //     i++
+        // } 
+
+        do {
+
+            if (users[i].name.toLowerCase() == inputName.toLowerCase()) {
+                resultPhone.innerHTML = `Telefone: ${users[i].phone}`
+                break
+            } else {
+                resultPhone.innerHTML = 'Usuário não cadastrado!'
+                console.log(users[i])
+            }
+
+            i++
+            console.log(i)
+        } while (users[i].name !== inputName);
+
+    }
+
+    buttonSearch.addEventListener('click', search)
+
+
+</script>
+
+</html>
