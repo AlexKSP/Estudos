@@ -101,9 +101,9 @@
         //Estou chamando uma função atevez da variavel, para mostrar o total na tela
         //const newTotal = subTotal()
         //const oldTotal = oldSubTotal()
-        tot.innerHTML = ` R$ ${oldSubTotal()} <br>` 
+        tot.innerHTML = ` R$ ${oldSubTotal().toFixed(2)} <br>` 
         discount()
-        tot.innerHTML += `R$ ${subTotal()} (COM DESCONTO)<br>`
+        tot.innerHTML += `R$ ${subTotal().toFixed(2)} (COM DESCONTO)<br>`
 
     
         console.log('validar tot')
@@ -115,7 +115,13 @@
     
     button.addEventListener('click', totDisplay)
     button.addEventListener('click', priceDisplay)
+    button.addEventListener('click', hiddenButton)
 
+    function hiddenButton() {
+        button.style.display = 'none'
+    }
+    
+    
     
 function discount() {
     let i = 0
