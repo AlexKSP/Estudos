@@ -22,15 +22,17 @@ const products = [
 ]
     
 function discount() {
+    const product = products
+    console.log(product)
     let i = 0
     let myArray = []
-    while (i < products.length) {
+    while (i < product.length) {
             
         //Desconto sendo aplicado em cada item do array acima de 30$
-        myArray[i] = products[i].price
-        if (products[i].price > 30) {
-            products[i].price = products[i].price - products[i].price / 10
-            myArray[i] = products[i].price
+        myArray[i] = product[i].price
+        if (product[i].price > 30) {
+            product[i].price = product[i].price - product[i].price / 10
+            myArray[i] = product[i].price
         }
         i++
     }
@@ -46,10 +48,10 @@ function subTotal() {
     return total
 }
 
-console.log(products[1].price)
+console.log(products[2].price)
 const cart = discount()
 const total = subTotal()
-
+console.log(products[2].price)
 //console.log(total + ' : ' + cart)
 
 

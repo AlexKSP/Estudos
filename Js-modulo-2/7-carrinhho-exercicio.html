@@ -37,6 +37,31 @@
     const price = document.querySelector('.price')
     const tot = document.querySelector('.tot')
 
+        //produtos que serão calculados pois estão no carrinho
+    const products = [
+        {
+            name: 'Marcarrão',
+            price: 10
+        },
+        {
+            name: 'Molho de tomate',
+            price: 5
+        },
+        {
+            name: 'Carne moida (Kg)',
+            price: 33
+        },
+        {
+            name: 'Queijo (Kg)',
+            price: 90
+        },
+        {
+            name: 'Coca-cola 3L',
+            price: 12
+        }
+    ]
+
+    const product = products
     
     //Mostra na tela as compras com valores normais
     function carDisplay() {
@@ -56,7 +81,7 @@
     //Mostra a tabela de itens com os descontos aplicados
     function priceDisplay() {
         //estou usando uma variavel para chamar a função. Talvez não seria necessário dela, e somente deixar o "discount()"
-        const total = discount()
+        discount()
         let x
         let y
         //imprimir na tela, vcalores em tabela
@@ -74,9 +99,12 @@
     //mostra o total na tela COM DESCONTO
     function totDisplay() {
         //Estou chamando uma função atevez da variavel, para mostrar o total na tela
-        const total = subTotal()
+        //const newTotal = subTotal()
+        //const oldTotal = oldSubTotal()
+        tot.innerHTML = ` R$ ${oldSubTotal()} <br>` 
+        discount()
+        tot.innerHTML += `R$ ${subTotal()} (COM DESCONTO)<br>`
 
-        tot.innerHTML += ` Total de: R$ ${total} (COM DESCONTO)<br>`
     
         console.log('validar tot')
     }
@@ -84,47 +112,25 @@
     //chammada de evento para mostrar na tela os valores de R$"atual, desconto, total"
 
     button.addEventListener('click', carDisplay)
-    button.addEventListener('click', priceDisplay)
+    
     button.addEventListener('click', totDisplay)
+    button.addEventListener('click', priceDisplay)
 
-    //produtos que serão calculados pois estão no carrinho
-    const products = [
-    {
-        name: 'Marcarrão',
-        price: 10
-    },
-    {
-        name: 'Molho de tomate',
-        price: 5
-    },
-    {
-        name: 'Carne moida (Kg)',
-        price: 33
-    },
-    {
-        name: 'Queijo (Kg)',
-        price: 90
-    },
-    {
-        name: 'Coca-cola 3L',
-        price: 12
-    }
-]
     
 function discount() {
     let i = 0
     let myArray = []
-    while (i < products.length) {
+    while (i < product.length) {
             
         //Desconto sendo aplicado em cada item do array acima de 30$
-        myArray[i] = products[i].price
-        if (products[i].price > 30) {
-            products[i].price = products[i].price - products[i].price / 10
-            myArray[i] = products[i].price
+        myArray[i] = product[i].price
+        if (product[i].price > 30) {
+            product[i].price = product[i].price - product[i].price / 10
+            myArray[i] = product[i].price
         }
         i++
     }
-    return myArray
+    //return myArray
 }
 
 function subTotal() {
@@ -136,11 +142,20 @@ function subTotal() {
     return total
 }
 
+function oldSubTotal() {
+    let oldTotal = 0
+    for (let i=0; i < product.length ;i++) {
+        oldTotal+=product[i].price // total = total + preço do produto na posição i
+        console.log(oldTotal + ' + ' + i )
+    }
+    return oldTotal
+}
+
 //console.log(products[1].price)
 //const cart = discount()
 //const total = subTotal()
 
-//console.log(total + ' : ' + cart)
+//console.log( cart)
 
 
 
