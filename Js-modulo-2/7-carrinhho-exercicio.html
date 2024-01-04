@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <style>
+        section {
+            display: flex;
+            align-items: left;
+            justify-content: center;
+            gap: 2rem;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -14,9 +22,11 @@
 
         <button>clique</button>
 
-        <p class="car"></p>
-        <p class="price"></p>
-        <p class="tot"></p>
+        <section>
+            <label>Preço<p class="car"></p></label>
+            <label>Desconto<p class="price"></p></label>
+            <label>Total<p class="tot"></p></label>
+        </section>
 
     </main>
 </body>
