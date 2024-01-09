@@ -11,4 +11,4 @@ function sayMyName(name){
 const sayMyName2 = (name) => `Seu nome é ${name}`
 
 console.log(sayMyName('Alex'))
-console,log(sayMyName2('Rodolfo'))
+console.log(sayMyName2('Rodolfo'))
