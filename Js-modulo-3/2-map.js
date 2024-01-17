@@ -13,17 +13,77 @@ const list = [
 
 //fazer o que o valor do map mude, se for true, a pulseira vai ser 'black' e se for false 'green'. Usando o map para criar uma nova lista
 
-const bracelet = list.map(item => {
 
-    if(item.vip){
-        item.vip = 'black'
-    } else {
-        item.vip = 'green'
-    }
+
+        /*minha forma de fazer:*/
+// const bracelet = list.map(item => {
+
+//     const newItem = item
+//     if(newItem.vip){
+//         newItem.vip = 'black'
+//     } else {
+//         newItem.vip = 'green'
+//     }
     
-    return item
+//     return newItem
+// })
+
+// console.log(bracelet)
+// console.log(' ')
+// console.log(list)
+
+
+
+
+
+        /*curso, usando ternario.*/
+
+// const newList = list.map( user => {
+//     const newUser = {
+//         name: user.name,
+//         braceletColor: user.vip ? 'black' : 'green'
+//     }
+
+//     return newUser
+// })
+
+//console.log(newList) 
+
+
+
+
+      
+            /*segunda forma do curso, com if [errado ?]*/
+
+// const newSecondList = list.map( user => {
+//     let braceletColor
+
+//     if(braceletColor === true){
+//         braceletColor = 'black'
+//     } else {
+//         braceletColor = 'green'
+//     }
+    
+//     const newUser = {
+//         name: user.name,
+//         braceletColor: braceletColor
+//     }
+
+//     return newUser
+// })
+
+//console.log(newSecondList)
+
+
+
+
+
+        /*teceira forma com terniario e return*/
+const newThirdList = list.map( user => {
+    return {
+        name: user.name,
+        braceletColor: user.vip ? 'black' : 'green'
+    }
 })
 
-console.log(bracelet)
-console.log(' ')
-console.log(list)
+console.log(newThirdList)
