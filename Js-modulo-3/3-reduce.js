@@ -18,13 +18,21 @@ const sum = list.reduce( (acumulador, valorAtual) => {
 
 }, 0) // ATENÇÃO, é necessário declarar o valor inicial do acumulador, e é onde está esse 0 após as chaves que ele fica
 
-console.log(sum)
+//console.log(sum)
 //tente entender o que aconteceu
 
 const cart = [
     {productName: 'Tomate', pricePerKg: 8, kg:1},
     {productName: 'Uva', pricePerKg: 5, kg:2},
-    {productName: 'Picanha', pricePerKg: 38.9, kg:},
-    {productName: 'Ovo', pricePerKg: 1.2, kg:},
-    {productName: 'Salcinha', pricePerKg: 0.8, kg:},
+    {productName: 'Picanha', pricePerKg: 38.9, kg:3},
+    {productName: 'Ovo', pricePerKg: 1.2, kg:2.25},
+    {productName: 'Salcinha', pricePerKg: 0.8, kg:1.4},
 ]
+
+const totalCart = cart.reduce((acc, value) => {
+
+    return (value.pricePerKg * value.kg) + acc
+
+},0)
+
+console.log(totalCart.toFixed(2))
