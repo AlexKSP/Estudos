@@ -8,8 +8,22 @@ const companies = [
 ]
 
 // Subtrair 10% de valor de mercado e todas as companhias
-// Filtrar somente companhias fundadas depois de 1990
+// Filtrar somente companhias fundadas depois de 1980
 // Somar o valor de mercado das restantes
 
+const subCompanies = (company) => {
+    company.marketValue - company.marketValue / 10
+    return company
+}
+
+const filterCompanies = (company) => company.foundedOn > 1980
+
+const reduceCompanies = (acc, company) => acc + company.marketValue 
 
 
+const marketValueOldCompanies = companies
+    .map(subCompanies)
+    .filter(filterCompanies)
+    .reduce(reduceCompanies, 0)
+
+console.log(marketValueOldCompanies)
