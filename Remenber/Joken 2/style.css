@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(32, 32, 32);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+section{
+    background-color: teal;
+    padding: .625rem;
+    width: 15.625rem;
+    height: 18.75rem;
+
+    border-radius: .625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button{
+    padding: .625rem;
+}
+
+.box-1{
+
+}
+
+.box-2{
+    text-align: left;
+    padding-left: 20px;
+}
