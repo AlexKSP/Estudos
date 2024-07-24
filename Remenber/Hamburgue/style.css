@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+
+}
+
+.button-header{
+    padding: 10px;
+    width: 110px;
+    height: 110px;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    /* ATENÇÃO A VISIBILIDADE */
+
+    /*visibility: hidden;*/
+}
+
+.product{
+    width: 200px;
+    height: 240px;
+    padding: 10px;
+    border: 1px black solid;
+}
+
+.box-img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
